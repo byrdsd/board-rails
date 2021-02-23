@@ -5,7 +5,7 @@ class BoardIndex extends React.Component {
     console.log*this.props.boards
     return (
       <React.Fragment>
-        Boards: {this.props.boards[0].name}
+        Boards: {this.props.boards[0].board.name}
         Posts: {this.props.boards[0].post_count}
       </React.Fragment>
     );
