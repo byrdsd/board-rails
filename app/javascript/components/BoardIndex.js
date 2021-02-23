@@ -6,6 +6,7 @@ class BoardIndex extends React.Component {
     return (
       <React.Fragment>
         Boards: {this.props.boards[0].name}
+        Posts: {this.props.boards[0].post_count}
       </React.Fragment>
     );
   }

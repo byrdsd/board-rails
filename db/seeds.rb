@@ -27,3 +27,19 @@ child_board = Board.new(
   parent_id: board.id
 )
 child_board.save!
+
+post = Post.new(
+  name: "Test post",
+  body: "This is the body of the post, and it can be as long as it needs to be!",
+  board_id: board.id,
+  user_id: user.id
+)
+post.save!
+
+post2 = Post.new(
+  name: "Test post",
+  body: "This is the body of the post, and it can be as long as it needs to be!",
+  board_id: child_board.id,
+  user_id: user.id
+)
+post2.save!
