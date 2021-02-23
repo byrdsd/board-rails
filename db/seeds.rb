@@ -28,13 +28,15 @@ child_board = Board.new(
 )
 child_board.save!
 
-post = Post.new(
-  name: "Test post",
-  body: "This is the body of the post, and it can be as long as it needs to be!",
-  board_id: board.id,
-  user_id: user.id
-)
-post.save!
+2.times do
+  post = Post.new(
+    name: "Test post",
+    body: "This is the body of the post, and it can be as long as it needs to be!",
+    board_id: board.id,
+    user_id: user.id
+  )
+  post.save!
+end
 
 post2 = Post.new(
   name: "Test post",
