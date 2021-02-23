@@ -14,3 +14,16 @@ user = User.new(
 )
 user.skip_confirmation!
 user.save!
+
+board = Board.new(
+  name: "Test",
+  description: "This is an automatically generated test board"
+)
+board.save!
+
+child_board = Board.new(
+  name: "Test Child",
+  description: "This is a test board, and a child of the first Test board",
+  parent_id: board.id
+)
+child_board.save!
